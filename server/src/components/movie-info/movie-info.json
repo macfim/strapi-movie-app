@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_movie_info_movie_infos",
+  "info": {
+    "displayName": "MovieInfo",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "releasedYear": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -25,16 +25,13 @@
       "required": true,
       "unique": true
     },
-    "yearReleased": {
-      "type": "string",
-      "required": true
-    },
-    "duration": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text"
+    },
+    "movieInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "movie-info.movie-info"
     }
   }
 }
