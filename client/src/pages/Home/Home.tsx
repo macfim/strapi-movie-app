@@ -57,22 +57,22 @@ type movies = {
 
 function Home() {
   const [movies, setMovies] = useState<movies | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    setLoading((prev) => !prev);
+    setIsLoading((prev) => !prev);
     fetchMovies()
       .then((response) => {
         setMovies(response.data);
       })
       .catch((err) => setError(err.message))
-      .finally(() => setLoading((prev) => !prev));
+      .finally(() => setIsLoading((prev) => !prev));
   }, []);
 
-  if (loading) return <div>loading...</div>;
+  if (isLoading) return <div>loading...</div>;
   else if (error) return <div>{error}</div>;
   else
     return (
