@@ -1,10 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 
-type Props = {}
+import Home from "./pages/Home/Home";
+import Movie from "./pages/Movie/Movie";
 
-const App = ({}: Props) => {
+const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/:id" element={<Movie />} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
